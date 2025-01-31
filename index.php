@@ -3,7 +3,6 @@ include 'header.php';
 
 if (isset($_GET['add_to_cart']) && isset($_GET['product_id'])) {
   addToCart($_GET['product_id'], $products);
-  // Redirect to the same page to prevent form resubmission
   header("Location: index.php#featured-products");
   exit;
 }
@@ -29,11 +28,10 @@ if (isset($_GET['add_to_cart']) && isset($_GET['product_id'])) {
     <h2>Featured Products</h2>
     <div class="products-grid" id="products-container">
       <?php foreach ($products as $product): ?>
-        <div class="product-card">
+        <div class="product-card" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="<?= $product['id'] ?>">
           <div class="product-image">
             <img src="<?= $product['image'] ?>" alt="<?= $product['name'] ?>">
             <div class="product-actions">
-              <!-- Use a form to submit the product ID -->
               <form action="index.php" method="get">
                 <input type="hidden" name="add_to_cart" value="true">
                 <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
@@ -50,5 +48,28 @@ if (isset($_GET['add_to_cart']) && isset($_GET['product_id'])) {
     </div>
   </div>
 </section>
+
+<!-- Product Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="productModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Product details will be loaded here -->
+      </div>
+      <div class="modal-footer">
+        <form action="index.php" method="get">
+          <input type="hidden" name="add_to_cart" value="true">
+          <input type="hidden" name="product_id" value="">
+          <button type="submit" class="btn btn-primary add-to-cart">Add to Cart</button>
+        </form>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <?php include 'footer.php'; ?>
