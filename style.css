@@ -9,9 +9,23 @@ body {
   font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.5;
   color: #1a1a1a;
-  background-color: white; /* Default light mode background */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition for dark mode */
+  background-color: white;
+  /* Default light mode background */
+  transition: background-color 0.3s, color 0.3s;
+  /* Smooth transition for dark mode */
 }
+
+.navbar-logo {
+  height: 70px;
+  /* Adjust the height to fit your navbar */
+  width: auto;
+  /* Maintain aspect ratio */
+  object-fit: contain;
+  /* Prevents distortion */
+  margin-left: 10px;
+  /* Adds some spacing */
+}
+
 
 body.dark-mode {
   color: white;
