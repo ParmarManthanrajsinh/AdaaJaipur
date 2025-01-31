@@ -17,18 +17,31 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container">
       <div class="d-flex justify-content-between align-items-center w-100">
-        <div class="nav-left">
+        <!-- <div class="nav-left">
           <button class="navbar-toggler menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <a class="navbar-brand" href="index.php">
             <h1>Adaa Jaipur</h1>
           </a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        </div> -->
+        <div class="nav-left">
+  <button class="menu-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="4" x2="20" y1="12" y2="12"/>
+      <line x1="4" x2="20" y1="6" y2="6"/>
+      <line x1="4" x2="20" y1="18" y2="18"/>
+    </svg>
+  </button>
+  <a href="index.php">
+    <img src="img.png" alt="Adaa Jaipur Logo" class="navbar-logo">
+  </a>
+</div>
+
+        <div class="collapse navbar-collapse" id="navbarNav" >
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a href="index.php" class="nav-link <?php if ($currentPage == 'index.php') echo 'active'; ?>">Home</a>
+              <a href="index.php" class="nav-link <?php if ($currentPage == 'index.php') echo 'active'; ?> ">Home</a>
             </li>
             <li class="nav-item">
               <a href="about.php" class="nav-link <?php if ($currentPage == 'about.php') echo 'active'; ?>">About</a>
