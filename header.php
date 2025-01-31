@@ -41,13 +41,13 @@
         <div class="collapse navbar-collapse" id="navbarNav" >
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
-              <a href="index.php" class="nav-link <?php if ($currentPage == 'index.php') echo 'active'; ?> ">Home</a>
+              <a href="index.php" class="nav-link <?php if ($currentPage == 'index.php') echo 'active'; ?> " style="color:rgb(249, 189, 55)">Home</a>
             </li>
             <li class="nav-item">
-              <a href="about.php" class="nav-link <?php if ($currentPage == 'about.php') echo 'active'; ?>">About</a>
+              <a href="about.php" class="nav-link <?php if ($currentPage == 'about.php') echo 'active'; ?>" style="color:rgb(249, 189, 55)">About</a>
             </li>
             <li class="nav-item">
-              <a href="contact.php" class="nav-link <?php if ($currentPage == 'contact.php') echo 'active'; ?>">Contact Us</a>
+              <a href="contact.php" class="nav-link <?php if ($currentPage == 'contact.php') echo 'active'; ?>" style="color:rgb(249, 189, 55)">Contact Us</a>
             </li>
           </ul>
         </div>
