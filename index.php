@@ -3,7 +3,8 @@ include 'header.php';
 
 if (isset($_GET['add_to_cart']) && isset($_GET['product_id'])) {
   addToCart($_GET['product_id'], $products);
-  header('Location: index.php');
+  // Redirect to the same page to prevent form resubmission
+  header("Location: index.php#featured-products");
   exit;
 }
 ?>
@@ -32,7 +33,12 @@ if (isset($_GET['add_to_cart']) && isset($_GET['product_id'])) {
           <div class="product-image">
             <img src="<?= $product['image'] ?>" alt="<?= $product['name'] ?>">
             <div class="product-actions">
-              <a href="index.php?add_to_cart=true&product_id=<?= $product['id'] ?>"><button class="add-to-cart">Add to Cart</button></a>
+              <!-- Use a form to submit the product ID -->
+              <form action="index.php" method="get">
+                <input type="hidden" name="add_to_cart" value="true">
+                <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
+                <button type="submit" class="add-to-cart">Add to Cart</button>
+              </form>
             </div>
           </div>
           <div class="product-info">
