@@ -7,10 +7,6 @@ include 'header.php';
     <div class="about-content">
       <h1>About Adaa Jaipur</h1>
       
-      <div class="about-image">
-        <img src="https://images.unsplash.com/photo-1590736704728-f4730bb8c88f?auto=format&fit=crop&q=80" alt="Our Workshop">
-      </div>
-      
       <div class="about-text">
         <h2>Our Story</h2>
         <p>Founded in 2020, Adaa Jaipur has been at the forefront of bringing traditional Indian craftsmanship to the modern world. Our journey began with a simple vision: to preserve and promote the rich heritage of Jaipur's textile artistry while making it accessible to contemporary fashion enthusiasts.</p>
