@@ -15,7 +15,7 @@ This repository contains the source code for a basic e-commerce website built us
 
 ## File Structure
 
-```
+
 📦 Project Root
 ├── img/                   # Image assets
 ├── about.php              # About page
@@ -30,7 +30,7 @@ This repository contains the source code for a basic e-commerce website built us
 ├── script.js              # JavaScript functions
 ├── style.css              # Custom styles
 ├── update-quantity.php    # Update cart quantity
-```
+
 
 ## Setup Instructions
 
